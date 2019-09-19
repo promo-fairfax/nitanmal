@@ -1,0 +1,18 @@
+.tweet__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.tweet__item {
+  margin: 0 10px;
+}
+
+.twitter-tweet {
+  width: 220px;
+}
