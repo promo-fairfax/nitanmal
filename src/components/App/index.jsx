@@ -32,10 +32,13 @@ class App extends Component {
               <li>
                 <Link to="/tweets">Tweets</Link>
               </li>
+              <li>
+                <Link to="/cats">Random Cats</Link>
+              </li>
             </ul>
           </nav>
         </header>
-        <RandomCats />
+        {/* <RandomCats /> */}
         <main>
           <Switch>
             <Route exact path="/" component={Home} />
@@ -46,6 +49,7 @@ class App extends Component {
                 <Tweets updateTweets={this.updateTweets} tweets={tweets} />
               )}
             />
+            <Route exact path="/cats" component={RandomCats} />
           </Switch>
         </main>
       </div>
