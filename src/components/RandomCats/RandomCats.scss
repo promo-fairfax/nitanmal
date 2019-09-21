@@ -1,0 +1,13 @@
+.random__cat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .random__cat-button {
+    width: 100px;
+  }
+
+  .random__cat-image {
+    width: 500px;
+  }
+}
