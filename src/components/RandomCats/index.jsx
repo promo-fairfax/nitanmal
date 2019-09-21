@@ -1,20 +1,32 @@
 import React, { Component } from 'react';
 import { getCat } from '../../services/getCat';
+import { getCatFact } from '../../services/getCatFact';
 import './RandomCats.scss';
 
 class RandomCats extends Component {
   constructor(props){
     super(props);
     this.state = {
-      catData: {}
+      catData: {},
+      catFact: '',
     }
 
     this.handleCatFetch = this.handleCatFetch.bind(this);
+    this.handleCatFactFetch = this.handleCatFactFetch.bind(this);
   }
 
-  handleCatFetch(){
+  componentDidMount() {
+    this.handleCatFactFetch();
+  }
+
+  handleCatFetch() {
     return getCat()
       .then(data => this.setState({catData: data[0]}))
+  }
+
+  handleCatFactFetch() {
+    return getCatFact()
+      .then(data => console.log(data));
   }
 
   render(){
