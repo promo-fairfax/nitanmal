@@ -3,6 +3,7 @@ import './App.scss';
 import { Link, Route, Switch } from 'react-router-dom';
 import Home from '../Home/index';
 import Tweets from '../Tweets/index';
+import RandomCats from '../RandomCats';
 
 class App extends Component {
   constructor(props) {
@@ -34,6 +35,7 @@ class App extends Component {
             </ul>
           </nav>
         </header>
+        <RandomCats />
         <main>
           <Switch>
             <Route exact path="/" component={Home} />
