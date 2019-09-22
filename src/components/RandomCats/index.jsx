@@ -35,9 +35,9 @@ class RandomCats extends Component {
     return (
       <div className="random__cat-container">
         <h2 className="random__cat-title">Welcome to the random cat page</h2>
-        <h3 className="random__cat-subtitle">
+        <p className="random__cat-subtitle">
           Click on the button to get a random cat!
-        </h3>
+        </p>
         <button className="button random__cat-button" onClick={handleCatFetch}>
           Click me
         </button>

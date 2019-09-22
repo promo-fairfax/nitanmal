@@ -1,17 +1,74 @@
 .random__cat-container {
+  background-color: #EBEFF2;
+  min-height: 100vh;
+  font-family: 'Lato', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+
+  .random__cat-title {
+    margin: 20px;
+    font-size: 26px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  .random__cat-subtitle {
+    margin: 20px;
+    font-size: 16px;
+  }
 
   .button {
     margin: 20px;
+    background-color: #8AA6BF;
+    border: 2px solid black;
+    border-radius: 15px;
+    color: #010326;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.1s;
+
+    &:hover {
+      color: #EBEFF2;
+    }
   }
 
   .random__cat-button {
     width: 100px;
+    height: 40px;
   }
 
   .random__cat-image {
-    width: 500px;
+    width: 75%;
+  }
+
+  .twitter__button {
+    display: block;
+    padding: 25px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  @media all and (min-width: 768px){
+    .random__cat-image {
+      width: 600px;
+    }
+
+    .random__cat-title {
+      font-size: 40px;
+    }
+
+    .random__cat-subtitle {
+      font-size: 20px;
+    }
+
+    .twitter__button {
+      margin: 5px 0;
+      position: fixed;
+      bottom: 0;
+      right: 5%;
+    }
   }
 }
