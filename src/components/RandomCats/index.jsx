@@ -25,8 +25,8 @@ class RandomCats extends Component {
   }
 
   handleCatFactFetch() {
-    return getCatFact()
-      .then(data => console.log(data));
+    // return getCatFact()
+    //   .then(data => console.log(data));
   }
 
   render(){
