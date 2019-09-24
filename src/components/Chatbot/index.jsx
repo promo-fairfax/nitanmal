@@ -45,11 +45,13 @@ class Chatbot extends React.Component {
   }
 
   render() {
+    const { handleChatbot } = this.props;
     return (
-      <div class="chat">
-        <div class="messages"></div>
+      <div className="chat">
+        <div className="chatbot__close" onClick={handleChatbot}></div>
+        <div className="messages"></div>
         <div id="edge"></div>
-        <form class="actions">
+        <form className="actions">
           <input type="text" placeholder="press 'Enter' to send…"/>
         </form> 
       </div>
