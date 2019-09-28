@@ -8,7 +8,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tweets: []
+      tweets: [],
+      btnBeer: false,
+      closeModal: false
     };
   }
 
@@ -18,8 +20,16 @@ class App extends Component {
     });
   };
 
+  onClickBeer = () => {
+    this.setState({ btnBeer: true })
+  }
+
+  onClickClose = () => {
+    this.setState({ closeModal: false ? true : false, btnBeer: false })
+  }
+
   render() {
-    const { tweets } = this.state;
+    const { tweets, btnBeer, closeModal } = this.state;
     return (
       <div className="App">
         <header>
@@ -36,7 +46,12 @@ class App extends Component {
         </header>
         <main>
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" render={() => (
+              <Home onClickBeer={ this.onClickBeer }
+                btnBeer={ btnBeer }
+                onClickClose={ this.onClickClose }
+                closeModal={ closeModal }/>
+            )} />
             <Route
               exact
               path="/tweets"
