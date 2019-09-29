@@ -3,6 +3,7 @@ import './App.scss';
 import { Link, Route, Switch } from 'react-router-dom';
 import Home from '../Home/index';
 import Tweets from '../Tweets/index';
+import WhatsNext from '../WhatsNext/WhatsNext'
 import Horoscope from '../Horoscope/index';
 import RandomCats from '../RandomCats';
 
@@ -79,6 +80,9 @@ class App extends Component {
                 <Link to="/tweets">Tweets</Link>
               </li>
               <li>
+                <Link to="/whats-next">What should I watch next?</Link>
+              </li>
+              <li>
                 <Link to="/horoscope">Horoscope</Link>
               </li>
               <li>
@@ -109,6 +113,7 @@ class App extends Component {
                 <Tweets updateTweets={this.updateTweets} tweets={tweets} />
               )}
             />
+            <Route exact path="/whats-next" component={WhatsNext} />
             <Route
               exact path="/horoscope"
               render={() => (
