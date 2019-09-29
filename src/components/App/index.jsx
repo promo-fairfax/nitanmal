@@ -12,9 +12,11 @@ class App extends Component {
       tweets: [],
       chatbotOpen: false,
       btnBeer: false,
-      closeModal: false
+      closeModal: false,
+      tea: false
     };
     this.handleChatbot = this.handleChatbot.bind(this);
+    this.handleTea = this.handleTea.bind(this);
   }
 
   updateTweets = tweetsResponse => {
@@ -33,9 +35,15 @@ class App extends Component {
   onClickClose = () => {
     this.setState({ closeModal: false ? true : false, btnBeer: false })
   }
+  
+  handleTea () {
+    this.setState({tea : !this.state.tea});
+    console.log(this.state.tea);
+  }
 
   render() {
-    const { tweets, btnBeer, closeModal, chatbotOpen } = this.state;
+    const { tweets, btnBeer, closeModal, chatbotOpen, tea } = this.state;
+
     return (
       <div className="App">
         <header>
@@ -64,7 +72,9 @@ class App extends Component {
                 onClickBeer={ this.onClickBeer }
                 btnBeer={ btnBeer }
                 onClickClose={ this.onClickClose }
-                closeModal={ closeModal } />
+                closeModal={ closeModal }
+                tea={tea}
+                handleTea={this.handleTea} />
               )}
             />
             <Route

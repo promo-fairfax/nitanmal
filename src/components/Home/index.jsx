@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './Home.scss';
 import BeerBtn from '../BeerBtn';
 import Chatbot from '../Chatbot/index';
+import Tea from '../Tea/index';
 
 class Home extends React.Component {
   render () {
@@ -30,6 +31,14 @@ class Home extends React.Component {
         { btnBeer ? <BeerBtn onClickClose={ onClickClose } closeModal={ closeModal }/> : null }
         <div className='beer__btn' onClick={onClickBeer}><span className='beer__btn_text'>¿Cerveza?</span></div>
       </div>
+      <div className="home__tea--button" onClick={handleTea}>¿Un té rico?</div>
+        <div className="home__tea">
+          {tea ? 
+            <Tea handleTea={handleTea} />
+            :
+            null
+          }
+        </div>
     ) 
   }
 }

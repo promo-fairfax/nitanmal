@@ -1,3 +1,19 @@
+.home__tea--button {
+  padding: 10px 20px;
+  background-color: rgb(7, 53, 204);
+  color: white;
+  border-radius: 10px;
+  border: solid 2px transparent;
+  display: inline-block;
+  transition: ease 0.4s;
+  cursor: pointer;
+  &:hover {
+    background-color: white;
+    border: solid 2px rgb(7, 53, 204);
+    color: rgb(7, 53, 204);
+  }
+}
+
 // -------------------- CHATBOT ---------------------------
 
 .home__chatbot {
