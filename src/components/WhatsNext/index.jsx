@@ -5,7 +5,7 @@ import fetchUrl from '../../services/fetchUrl';
 const seriesUrl = 'http://api.tvmaze.com/search/shows?q=';
 
 const WhatsNext = () => {
-    const [ seriesList, setSeriesList ] = useState([]);
+    const [ seriesList, /**setSeriesList**/ ] = useState([]);
     const [ randomSelection, setRandomSelection ] = useState("");
     const [ seriesResult, setSeriesResult ] = useState([])
 
@@ -37,7 +37,7 @@ const WhatsNext = () => {
     }
 
     const buildSearchList = () => {
-        return seriesResult.map((serie, index) => <li className="whats-next__item" onClick={handleClick} key={index}>{serie.show.name}</li>)
+        return seriesResult.map((serie, index) => <li className="whats-next__item" onClick={''} key={index}>{serie.show.name}</li>)
     }
 
     const handleRandomClick = () => {

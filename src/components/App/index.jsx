@@ -3,7 +3,7 @@ import './App.scss';
 import { Link, Route, Switch } from 'react-router-dom';
 import Home from '../Home/index';
 import Tweets from '../Tweets/index';
-import WhatsNext from '../WhatsNext/WhatsNext'
+import WhatsNext from '../WhatsNext/index';
 import Horoscope from '../Horoscope/index';
 import RandomCats from '../RandomCats';
 
