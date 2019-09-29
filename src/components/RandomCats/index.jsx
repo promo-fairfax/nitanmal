@@ -10,7 +10,6 @@ class RandomCats extends Component {
       catData: {},
       catFact: '',
     }
-
     this.handleCatFetch = this.handleCatFetch.bind(this);
     this.handleCatFactFetch = this.handleCatFactFetch.bind(this);
   }
@@ -25,8 +24,8 @@ class RandomCats extends Component {
   }
 
   handleCatFactFetch() {
-    // return getCatFact()
-    //   .then(data => console.log(data));
+    const catFact = getCatFact()
+    this.setState({catFact : catFact.fact});
   }
 
   render(){
@@ -52,7 +51,7 @@ class RandomCats extends Component {
           <div className="twitter__container">
             <a
               className="button twitter__button"
-              href={`http://twitter.com/share?text=Here is my favourite new cat&url=${catData.url}`}
+              href={`http://twitter.com/share?text=Did you know...${this.state.catFact}&url=${catData.url}`}
               target="_blank"
               rel="noopener noreferrer"
             >

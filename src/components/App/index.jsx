@@ -91,7 +91,6 @@ class App extends Component {
             </ul>
           </nav>
         </header>
-        {/* <RandomCats /> */}
         <main>
           <Switch>
             <Route
