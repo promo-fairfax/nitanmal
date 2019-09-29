@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Home.scss';
+import BeerBtn from '../BeerBtn';
 import Chatbot from '../Chatbot/index';
 
 class Home extends React.Component {
@@ -26,6 +27,8 @@ class Home extends React.Component {
             </div>
           }
         </div>
+        { btnBeer ? <BeerBtn onClickClose={ onClickClose } closeModal={ closeModal }/> : null }
+        <div className='beer__btn' onClick={onClickBeer}><span className='beer__btn_text'>¿Cerveza?</span></div>
       </div>
     ) 
   }

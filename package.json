@@ -4,13 +4,16 @@
   "homepage": "./",
   "private": true,
   "dependencies": {
+    "cors": "^2.8.5",
+    "cors-anywhere": "^0.4.1",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
     "react-twitter-embed": "^2.0.8",
-    "rivescript": "^2.0.0"
+    "rivescript": "^2.0.0",
+    "yarn": "^1.17.3"
   },
   "scripts": {
     "start": "react-scripts start",
