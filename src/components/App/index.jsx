@@ -80,6 +80,8 @@ class App extends Component {
               </li>
               <li>
                 <Link to="/horoscope">Horoscope</Link>
+              </li>
+              <li>
                 <Link to="/cats">Random Cats</Link>
               </li>
             </ul>

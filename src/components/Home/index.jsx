@@ -4,9 +4,9 @@ import BeerBtn from '../BeerBtn';
 import Chatbot from '../Chatbot/index';
 import Tea from '../Tea/index';
 
-class Home extends React.Component {
+class Home extends Component {
   render () {
-    const { chatbotOpen, handleChatbot } = this.props; 
+    const { chatbotOpen, handleChatbot, btnBeer, onClickClose, closeModal, onClickBeer, handleTea, tea  } = this.props; 
     return(
       <div className="home">
         <h1 className="home__title">Ni Tan Mal</h1>
@@ -30,15 +30,13 @@ class Home extends React.Component {
         </div>
         { btnBeer ? <BeerBtn onClickClose={ onClickClose } closeModal={ closeModal }/> : null }
         <div className='beer__btn' onClick={onClickBeer}><span className='beer__btn_text'>¿Cerveza?</span></div>
-      </div>
-      <div className="home__tea--button" onClick={handleTea}>¿Un té rico?</div>
-        <div className="home__tea">
+        <div className="home__tea--button" onClick={handleTea}>¿Un té rico?</div>
           {tea ? 
             <Tea handleTea={handleTea} />
             :
             null
           }
-        </div>
+      </div>
     ) 
   }
 }
