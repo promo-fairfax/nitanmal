@@ -1,0 +1,35 @@
+! version = 2.0
+
++ hello
+- hello, what is your name?
+
++ hi
+- hi, what is your name?
+
++ what is up
+- not much, what is your name?
+
++ how are you
+- I'm great, how are you?
+- I'm good, you?
+- Good :) you?
+- Great! You?
+- I'm fine, thanks for asking!
+
++ my name is *
+- nice to meet you, <star>
+- nice meeting you, <star>
+- that's a cool name, <star>
+
+
++ thank you
+- you are welcome
+- welcome
+- no problem
+- no worries
+
++ *
+- Sorry did not get what you said
+- I am afraid that i can not understand you
+- I did not get it
+- Sorry can you please elaborate that for me

@@ -1,0 +1,266 @@
+
+.home__tea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tea__background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(128, 128, 128, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tea__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 70%;
+  background-color: #003366;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tea__close {
+  color: white;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: ease-in 1s;
+  &:hover {
+    transform: rotate(270deg);
+  }
+}
+
+.tea__glass {
+  display: block;
+  width: 240px;
+  height: 350px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  border: solid 2px white;
+  position: relative;
+  margin-top: 57px;
+}
+
+.tea__glass:before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 175px;
+  border-radius: 50%;
+  border: solid 2px white;
+  z-index: 2;
+  transform: translate(-50%, 0);
+  left: 50%;
+  top: 53px;
+}
+
+.tea__glass--inside {
+  display: block;
+  width: 230px;
+  height: 344px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  border: solid 1px white;
+  position: absolute;
+  transform: translate(-50%, 0);
+  left: 50%;
+  top: 0;
+  overflow: hidden;
+}
+
+.tea__glass--inside::before {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 50px;
+  background-color: #003366;
+  position: absolute;
+  z-index: 10;
+  top: 20px;
+}
+
+.tea__top {
+  background-color: #003366;
+  z-index: 1;
+  width: 200px;
+  height: 70px;
+  position: absolute;
+  top: 33px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tea__liquid {
+  background-color: #32BAFA;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  // height: 160px;
+  animation-name: filling;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+
+@keyframes filling {
+  from {
+    height: 0;
+  }
+  to {
+    height: 160px;
+  }
+}
+
+.tea__liquid--top {
+  background-color: #32BAFA;
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  // bottom: 160px;
+  animation-name: filling-top;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+
+@keyframes filling-top {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 160px;
+  }
+}
+
+.tea__liquid--top:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 252px;
+  height: 70px;
+  background-color: #32BAFA;
+  z-index: -10;
+  animation-name: waves;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+  animation-timing-function: linear;
+  animation-delay: 3s;
+}
+
+@keyframes waves {
+  0% {
+    right: 200px;
+    top: 0;
+  }
+  25% {
+    right: 130px;
+    top: -10px;
+  }
+  50% {
+    right: 60px;
+    top: -15px;
+  }
+
+  75% {
+    right: 0px;
+    top: -10px
+  }
+  100% {
+    right: -50px;
+    top: -5px;
+  }
+}
+
+
+.tea__pouring {
+  background-color: #32BAFA;
+  width: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 20;
+  border-radius: 15px;
+  animation-name: pouring;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+@keyframes pouring {
+  from {
+    top: -850px;
+    height: 1100px;
+  }
+  to {
+    top: 270px;
+    height: 158px;
+  }
+}
+
+
+.tea__bag--container {
+  position: absolute;
+  top: -300px;
+  animation-name: teabag;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+  z-index: 30;
+  .tea__bag {
+    width: 70px;
+    height: 80px;
+    background-color: white;
+    border-radius: 0 0 5px 5px;
+    position: relative;
+    .tea__bag--top {
+      border-bottom: 20px solid white;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      height: 0;
+      width: 40px;
+      position: absolute;
+      top: -19px;
+    }
+  }
+}
+
+@keyframes teabag {
+  from {
+    top: -300px;
+  }
+  to {
+    top: 338px;
+    transform: rotate(9deg);
+  }
+}
+
+.tea__color {
+  animation-name: teacolor;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes teacolor {
+  from {
+    background-color: #32BAFA;
+  }
+  to {
+    background-color: #c58e4c;
+  }
+}
