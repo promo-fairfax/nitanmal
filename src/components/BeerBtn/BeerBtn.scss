@@ -1,0 +1,50 @@
+.beer__container {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.beer__close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background-color: rgb(124, 0, 0);
+    color: white;
+    padding: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.beer__container_content {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.beer__gif {
+    width: 100%;
+}
+
+.beer__text {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.closed {
+    display: none;
+}
