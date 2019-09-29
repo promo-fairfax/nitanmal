@@ -3,6 +3,7 @@ import './App.scss';
 import { Link, Route, Switch } from 'react-router-dom';
 import Home from '../Home/index';
 import Tweets from '../Tweets/index';
+import Horoscope from '../Horoscope/index';
 import RandomCats from '../RandomCats';
 
 class App extends Component {
@@ -15,6 +16,8 @@ class App extends Component {
       closeModal: false,
       tea: false
     };
+    
+    this.getHoroscope = this.getHoroscope.bind(this);
     this.handleChatbot = this.handleChatbot.bind(this);
     this.handleTea = this.handleTea.bind(this);
   }
@@ -25,9 +28,29 @@ class App extends Component {
     });
   };
 
+  getHoroscope(number) {
+
+    let emojiHoroscope = '';
+
+    if (number <= 5) {
+      emojiHoroscope = 'Gryffindor';
+    } else if (number >= 6 && number <= 9) {
+      emojiHoroscope = 'Slytherin';
+    } else if (number >=10 && number <= 13 ) {
+      emojiHoroscope = 'Ravenclaw';
+    } else if (number => 14) {
+      emojiHoroscope = 'Hufflepuff';
+    } 
+
+    this.setState({horoscope: emojiHoroscope});
+    
+    localStorage.setItem('emoji', emojiHoroscope);
+  }
+
   handleChatbot () {
     this.setState({chatbotOpen: !this.state.chatbotOpen});
   }
+
   onClickBeer = () => {
     this.setState({ btnBeer: true })
   }
@@ -56,6 +79,7 @@ class App extends Component {
                 <Link to="/tweets">Tweets</Link>
               </li>
               <li>
+                <Link to="/horoscope">Horoscope</Link>
                 <Link to="/cats">Random Cats</Link>
               </li>
             </ul>
@@ -81,6 +105,12 @@ class App extends Component {
               exact path="/tweets"
               render={() => (
                 <Tweets updateTweets={this.updateTweets} tweets={tweets} />
+              )}
+            />
+            <Route
+              exact path="/horoscope"
+              render={() => (
+                <Horoscope getHoroscope={this.getHoroscope}/>
               )}
             />
             <Route exact path="/cats" component={RandomCats} />
