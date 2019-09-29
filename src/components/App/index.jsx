@@ -8,8 +8,10 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tweets: []
+      tweets: [],
+      tea: false
     };
+    this.handleTea = this.handleTea.bind(this);
   }
 
   updateTweets = tweetsResponse => {
@@ -18,8 +20,13 @@ class App extends Component {
     });
   };
 
+  handleTea () {
+    this.setState({tea : !this.state.tea});
+    console.log(this.state.tea);
+  }
+
   render() {
-    const { tweets } = this.state;
+    const { tweets, tea } = this.state;
     return (
       <div className="App">
         <header>
@@ -36,10 +43,14 @@ class App extends Component {
         </header>
         <main>
           <Switch>
-            <Route exact path="/" component={Home} />
             <Route
-              exact
-              path="/tweets"
+              exact path="/"
+              render={() => (
+                <Home tea={tea} handleTea={this.handleTea} />
+              )}
+            />
+            <Route
+              exact path="/tweets"
               render={() => (
                 <Tweets updateTweets={this.updateTweets} tweets={tweets} />
               )}
