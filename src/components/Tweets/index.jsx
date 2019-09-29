@@ -15,12 +15,8 @@ export default class Tweets extends Component {
     return (
       <ul className="tweet__list">
         {tweets.map(id => (
-          <li className="tweet__item">
-            <TwitterTweetEmbed
-              tweetId={id}
-              key={id}
-              options={{ width: '320px' }}
-            />
+          <li className="tweet__item" key={id}>
+            <TwitterTweetEmbed tweetId={id} options={{ width: '320px' }} />
           </li>
         ))}
       </ul>
