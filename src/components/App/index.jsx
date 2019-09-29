@@ -10,9 +10,11 @@ class App extends Component {
     super(props);
     this.state = {
       tweets: [],
+      chatbotOpen: false,
       btnBeer: false,
       closeModal: false
     };
+    this.handleChatbot = this.handleChatbot.bind(this);
   }
 
   updateTweets = tweetsResponse => {
@@ -21,6 +23,9 @@ class App extends Component {
     });
   };
 
+  handleChatbot () {
+    this.setState({chatbotOpen: !this.state.chatbotOpen});
+  }
   onClickBeer = () => {
     this.setState({ btnBeer: true })
   }
@@ -30,7 +35,7 @@ class App extends Component {
   }
 
   render() {
-    const { tweets, btnBeer, closeModal } = this.state;
+    const { tweets, btnBeer, closeModal, chatbotOpen } = this.state;
     return (
       <div className="App">
         <header>
@@ -51,15 +56,19 @@ class App extends Component {
         {/* <RandomCats /> */}
         <main>
           <Switch>
-            <Route exact path="/" render={() => (
-              <Home onClickBeer={ this.onClickBeer }
+            <Route
+            exact path="/"
+            render={() => (
+              <Home chatbotOpen={chatbotOpen}
+                handleChatbot={this.handleChatbot}
+                onClickBeer={ this.onClickBeer }
                 btnBeer={ btnBeer }
                 onClickClose={ this.onClickClose }
-                closeModal={ closeModal }/>
-            )} />
+                closeModal={ closeModal } />
+              )}
+            />
             <Route
-              exact
-              path="/tweets"
+              exact path="/tweets"
               render={() => (
                 <Tweets updateTweets={this.updateTweets} tweets={tweets} />
               )}
