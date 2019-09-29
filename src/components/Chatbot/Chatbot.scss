@@ -1,0 +1,47 @@
+* {
+  font-family: Arial;
+  font-size: 12pt;
+ }
+ .chat {
+  width: 400px;
+  height: 90%;
+  position: fixed;
+  overflow: scroll;
+ }
+ .actions {
+  position: fixed;
+  bottom: 0;
+  display: block;
+  width: 100%;
+ }
+ .actions input{
+  height: 30px;
+  display: block;
+  width: 100%;
+  outline: 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+ }
+ .messages div {
+  max-width: 50%;
+  width: auto;
+  display: block;
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin: 10px;
+ }
+
+ .messages .bot {
+  background-color: rgb(30, 233, 233);
+  text-align: left;
+  color: darkslategrey;
+}
+
+.messages .self {
+  background-color: rgb(182, 72, 182);
+  text-align: right;
+  margin-left: auto;
+  color: white;
+}
