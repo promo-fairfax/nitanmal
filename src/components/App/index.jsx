@@ -3,6 +3,7 @@ import './App.scss';
 import { Link, Route, Switch } from 'react-router-dom';
 import Home from '../Home/index';
 import Tweets from '../Tweets/index';
+import WhatsNext from '../WhatsNext/WhatsNext'
 
 class App extends Component {
   constructor(props) {
@@ -31,6 +32,9 @@ class App extends Component {
               <li>
                 <Link to="/tweets">Tweets</Link>
               </li>
+              <li>
+                <Link to="/whats-next">What should I watch next?</Link>
+              </li>
             </ul>
           </nav>
         </header>
@@ -44,6 +48,7 @@ class App extends Component {
                 <Tweets updateTweets={this.updateTweets} tweets={tweets} />
               )}
             />
+            <Route exact path="/whats-next" component={WhatsNext} />
           </Switch>
         </main>
       </div>
