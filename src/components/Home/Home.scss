@@ -14,6 +14,35 @@
   }
 }
 
+// -------------------- TYPING EFFECT ------------------------
+.typing-effect {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #8aa6bf;
+  }
+
+  &__dynamic-text {
+    color: #f2d338;
+    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+    span {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 60px;
+    }
+  }
+
+
+}
+  
+
+.typing-effect span {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 60px;
+  color: #010326;
+}
+
 // -------------------- CHATBOT ---------------------------
 
 .home__chatbot {
