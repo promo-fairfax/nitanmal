@@ -1,3 +1,7 @@
+.horoscope {
+    margin-top: 50px;
+}
+
 .horoscope__modal--container {
     height: 100vh;
     width: 100vw;
@@ -25,6 +29,7 @@
 
 .horoscope__modal--text {
     text-align: center;
+    color: #f2d338; 
 }
 
 .horoscope__modal--close {
@@ -39,4 +44,44 @@
     padding: 7px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.horoscope__modal--content .tea__close {
+    top: 10px;
+    right: 10px;
+}
+
+.horoscope__form--legend {
+    color: #8aa6bf;
+}
+
+.horoscope__form--fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 20px 20px 40px 20px;
+    color: #ebeff2;
+}
+.horoscope__title {
+    margin: 30px 0 30px 20px;
+}
+
+.form__button {
+padding: 10px 15px;
+font-family: 'Montaga', serif;
+font-size: 16px;
+border: none;
+border-radius: 5px;
+color: white;
+background-color: #333333;
+margin: 0 0 20px 30px;
+    &:hover {
+        box-shadow: 1px 1px 10px 1px rgba(231, 231, 231, 0.2);
+        transform: scale(1.05);
+    }
+}
+
+.form__alert-message {
+    color: rgb(168, 31, 31);
+    margin: 5px 0;
 }

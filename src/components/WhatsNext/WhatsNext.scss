@@ -1,0 +1,16 @@
+.whats-next__container {
+    color: #ebeff2 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+        p {
+            margin-top: 20px;
+        }
+}
+
+.whats-next__content {
+    display: none;
+    width: 500px;
+}

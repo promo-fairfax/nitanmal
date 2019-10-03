@@ -18,14 +18,19 @@ class Horoscope extends React.Component {
 
   getResultHoroscope(event) {
     event.preventDefault();
-    const result = accData.reduce((a, b) => a + b);
-
-    if(accData.length === 4) {
-      this.props.getHoroscope(result);
-      this.setState({ alertMessage: false, modalEmoji: true })
-    } else {
+    if(accData.length === 0){
       this.setState({ alertMessage: true })
+    } else {
+      const result = accData.reduce((a, b) => a + b);
+
+      if(accData.length >= 4) {
+        this.props.getHoroscope(result);
+        this.setState({ alertMessage: false, modalEmoji: true })
+      } else{
+        this.setState({ alertMessage: true })
+      }
     }
+
   }
 
   sendValueToConstructor(event) {
@@ -124,12 +129,12 @@ class Horoscope extends React.Component {
               </label>
             </fieldset>
           <button onClick={this.getResultHoroscope} className="form__button" type="submit">click</button>
-          {this.state.alertMessage ? <p>Chato, ¡rellena todos los campos!</p> : ''}
+          {this.state.alertMessage ? <p className='form__alert-message'>Chato, ¡rellena todos los campos!</p> : ''}
         </form>
         { this.state.modalEmoji ?
           <div className='horoscope__modal--container'>
             <div className='horoscope__modal--content'>
-              <div className='horoscope__modal--close' onClick={this.closeEmoji}>X</div>
+            <i className="fas fa-times tea__close" onClick={this.closeEmoji}></i>
               <img className='horoscope__modal--emoji' src={this.showEmoji(horoscope)} alt='your emoji'></img>
               { messageEmoji }
             </div>

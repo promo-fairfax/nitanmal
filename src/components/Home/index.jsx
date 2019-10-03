@@ -18,12 +18,19 @@ class Home extends Component {
             "¡venga!",
             "pues ni tan mal",
             "¿qué día es hoy?",
+            "¡grupo favorito!",
             "¿quién está descansando?",
+            "siempre es todas las anteriores... hasta que no es todas las anteriores",
             "los muertos no maquetan",
             "A CHOLONACO",
             "¡vamos a verlo funcionando!",
             "lo he puesto en andaluz",
-            "¡esa NO es la actitud, para nada!"
+            "¡esa NO es la actitud, para nada!",
+            "¡a cholón!",
+            "¿quién me ha robado el té?",
+            "¡alumna favorita!",
+            "lo he puesto mal",
+            "lo puot peor"
           ]}
         />
       </div>
@@ -62,6 +69,7 @@ class Home extends Component {
             </div>
           )}
         </div>
+          {tea ? <Tea handleTea={handleTea} /> : null}
         <div className='home__buttons--container'>
           {btnBeer ? (
             <BeerBtn onClickClose={onClickClose} closeModal={closeModal} />
@@ -72,7 +80,6 @@ class Home extends Component {
           <div className="home__tea--button" onClick={handleTea}>
             ¿Un té rico?
           </div>
-          {tea ? <Tea handleTea={handleTea} /> : null}
         </div>
       </div>
     );
