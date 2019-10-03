@@ -10,7 +10,7 @@ class Home extends Component {
     return(
       <div className="home">
         <h1 className="home__title">Ni Tan Mal</h1>
-        <div className={`home__chatbot ${chatbotOpen ? 'open' : 'closed'}`}>
+        <div className={`home__chatbot ${chatbotOpen ? 'open' : 'closed-cid'}`}>
           {chatbotOpen ? 
             <Chatbot handleChatbot={handleChatbot} />
             :

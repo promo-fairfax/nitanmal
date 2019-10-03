@@ -1,9 +1,5 @@
-* {
-  font-family: Arial;
-  font-size: 12pt;
- }
  .chat {
-  width: 400px;
+  width: 330px;
   height: 90%;
   position: fixed;
   overflow: scroll;
@@ -22,6 +18,11 @@
   border-top: 0;
   border-left: 0;
   border-right: 0;
+ }
+ .messages {
+   position: absolute;
+   bottom: 240px;
+   width: 100%;
  }
  .messages div {
   max-width: 50%;
