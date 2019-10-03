@@ -15,6 +15,7 @@ class App extends Component {
       chatbotOpen: false,
       btnBeer: false,
       closeModal: false,
+      horoscope: '',
       tea: false
     };
     
@@ -33,15 +34,13 @@ class App extends Component {
 
     let emojiHoroscope = '';
 
-    if (number <= 5) {
-      emojiHoroscope = 'Gryffindor';
-    } else if (number >= 6 && number <= 9) {
-      emojiHoroscope = 'Slytherin';
-    } else if (number >=10 && number <= 13 ) {
-      emojiHoroscope = 'Ravenclaw';
-    } else if (number => 14) {
-      emojiHoroscope = 'Hufflepuff';
-    } 
+    if (number >= 9) {
+      emojiHoroscope = 'unicornio';
+    } else if (number >= 5 && number <= 8) {
+      emojiHoroscope = 'pizza';
+    } else if (number <= 4 ) {
+      emojiHoroscope = 'caca';
+    }
 
     this.setState({horoscope: emojiHoroscope});
     
@@ -66,13 +65,13 @@ class App extends Component {
   }
 
   render() {
-    const { tweets, btnBeer, closeModal, chatbotOpen, tea } = this.state;
+    const { tweets, btnBeer, closeModal, chatbotOpen, tea, horoscope } = this.state;
 
     return (
       <div className="App">
         <header>
           <nav>
-            <ul>
+            <ul className='app__nav'>
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -91,7 +90,6 @@ class App extends Component {
             </ul>
           </nav>
         </header>
-        {/* <RandomCats /> */}
         <main>
           <Switch>
             <Route
@@ -117,7 +115,7 @@ class App extends Component {
             <Route
               exact path="/horoscope"
               render={() => (
-                <Horoscope getHoroscope={this.getHoroscope}/>
+                <Horoscope getHoroscope={this.getHoroscope} horoscope={horoscope}/>
               )}
             />
             <Route exact path="/cats" component={RandomCats} />

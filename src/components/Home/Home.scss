@@ -1,17 +1,92 @@
+.home__buttons--container {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background-color: #8aa6bf;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+// -------------------- BEER BUTTON ---------------------------
+
+.beer__btn {
+  background-color: #010326;
+  width: 300px;
+  height: 100px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #f2d338;
+  transition: ease 0.4s;
+
+    &:hover {
+      box-shadow: 1px 1px 10px 1px rgba(30, 30, 30, 0.2);
+      background-color: #d9b23d;
+      color: #010326;
+    }
+}
+
+
+// -------------------- TEA BUTTON ---------------------------
+
 .home__tea--button {
-  padding: 10px 20px;
-  background-color: rgb(7, 53, 204);
-  color: white;
-  border-radius: 10px;
-  border: solid 2px transparent;
-  display: inline-block;
+  width: 300px;
+  height: 100px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: #010326;
+  color: #f2d338;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: ease 0.4s;
   cursor: pointer;
-  &:hover {
-    background-color: white;
-    border: solid 2px rgb(7, 53, 204);
-    color: rgb(7, 53, 204);
+
+    &:hover {
+      box-shadow: 1px 1px 10px 1px rgba(30, 30, 30, 0.2);
+      background-color: #d9b23d;
+      color: #010326;
+    }
+}
+
+// -------------------- TYPING EFFECT ------------------------
+.typing-effect {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
   }
+
+  &__dynamic-text {
+    color: #f2d338;
+    text-shadow: 0px 1px 3px rgb(34, 34, 34);
+    text-align: center;
+    span {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 60px;
+    }
+  }
+
+
+}
+
+.typing-effect span {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 60px;
+  color: #010326;
 }
 
 // -------------------- CHATBOT ---------------------------
@@ -176,24 +251,4 @@
 }
 
 
-// -------------------- END CHATBOT ---------------------------
 
-.beer__btn {
-    background-color: lightgreen;
-    width: 250px;
-    height: 70px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    &:hover {
-        box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.3);
-    }
-}
-
-.beer__btn_text {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-}
