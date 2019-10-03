@@ -71,7 +71,7 @@ class App extends Component {
       <div className="App">
         <header>
           <nav>
-            <ul>
+            <ul className='app__nav'>
               <li>
                 <Link to="/">Home</Link>
               </li>

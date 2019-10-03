@@ -43,7 +43,6 @@ class Home extends Component {
     } = this.props;
     return (
       <div className="home">
-        <h1 className="home__title">Ni Tan Mal</h1>
         {this.ReactTypingEffectDemo()}
         <div className={`home__chatbot ${chatbotOpen ? "open" : "closed"}`}>
           {chatbotOpen ? (
@@ -63,16 +62,18 @@ class Home extends Component {
             </div>
           )}
         </div>
-        {btnBeer ? (
-          <BeerBtn onClickClose={onClickClose} closeModal={closeModal} />
-        ) : null}
-        <div className="beer__btn" onClick={onClickBeer}>
-          <span className="beer__btn_text">¿Cerveza?</span>
+        <div className='home__buttons--container'>
+          {btnBeer ? (
+            <BeerBtn onClickClose={onClickClose} closeModal={closeModal} />
+          ) : null}
+          <div className="beer__btn" onClick={onClickBeer}>
+            ¿Cerveza?
+          </div>
+          <div className="home__tea--button" onClick={handleTea}>
+            ¿Un té rico?
+          </div>
+          {tea ? <Tea handleTea={handleTea} /> : null}
         </div>
-        <div className="home__tea--button" onClick={handleTea}>
-          ¿Un té rico?
-        </div>
-        {tea ? <Tea handleTea={handleTea} /> : null}
       </div>
     );
   }
