@@ -22,6 +22,7 @@ class Tea extends React.Component {
                 <div className="tea__bag--top"></div>
               </div>
             </div>
+            <div className="tea__milk"></div>
           </div>
         </div>  
       </div>

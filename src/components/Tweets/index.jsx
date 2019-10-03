@@ -5,7 +5,7 @@ import './Tweets.scss';
 
 export default class Tweets extends Component {
   componentDidMount() {
-    TweetJs.Search('%23superbowl', data => {
+    TweetJs.Search('%23tuertopreferido', data => {
       this.props.updateTweets(data);
     });
   }

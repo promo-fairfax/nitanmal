@@ -21,12 +21,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  height: 70%;
+  width: 1000px;
+  height: 600px;
   background-color: #003366;
   border-radius: 15px;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .tea__close {
@@ -44,31 +45,42 @@
 
 .tea__glass {
   display: block;
-  width: 240px;
-  height: 350px;
+  width: 249px;
+  height: 359px;
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
   border: solid 2px white;
   position: relative;
-  margin-top: 57px;
+  margin-top: 9%;
 }
 
 .tea__glass:before {
   content: "";
   position: absolute;
-  height: 26px;
-  width: 175px;
+  height: 7%;
+  width: 73%;
   border-radius: 50%;
   border: solid 2px white;
   z-index: 2;
   transform: translate(-50%, 0);
   left: 50%;
-  top: 53px;
+  top: 15%;
+}
+
+.tea__top {
+  background-color: #003366;
+  z-index: 1;
+  width: 85%;
+  height: 20%;
+  position: absolute;
+  top: 9%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .tea__glass--inside {
-  display: block;
-  width: 230px;
-  height: 344px;
+  // display: block;
+  width: 96.5%;
+  height: 98.7%;
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
   border: solid 1px white;
   position: absolute;
@@ -78,39 +90,16 @@
   overflow: hidden;
 }
 
-.tea__glass--inside::before {
-  content: "";
-  display: block;
-  width: 200px;
-  height: 50px;
-  background-color: #003366;
-  position: absolute;
-  z-index: 10;
-  top: 20px;
-}
-
-.tea__top {
-  background-color: #003366;
-  z-index: 1;
-  width: 200px;
-  height: 70px;
-  position: absolute;
-  top: 33px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .tea__liquid {
   background-color: #32BAFA;
   width: 100%;
   position: absolute;
   bottom: 0;
-  // height: 160px;
-  animation-name: filling;
-  animation-duration: 3s;
-  animation-iteration-count: 1;
+  animation-name: filling, teacolor, teamilk;
+  animation-duration: 3s, 3s, 3s;
+  animation-iteration-count: 1, 1, 1;
   animation-fill-mode: forwards;
-  animation-delay: 3s;
+  animation-delay: 2.5s, 7s, 11s;
 }
 
 @keyframes filling {
@@ -118,21 +107,20 @@
     height: 0;
   }
   to {
-    height: 160px;
+    height: 47%;
   }
 }
 
 .tea__liquid--top {
   background-color: #32BAFA;
   width: 100%;
-  height: 25px;
+  height: 4%;
   position: absolute;
-  // bottom: 160px;
-  animation-name: filling-top;
-  animation-duration: 3s;
-  animation-iteration-count: 1;
+  animation-name: filling-top, teacolor, teamilk;
+  animation-duration: 3s, 3s, 3s;
+  animation-iteration-count: 1, 1, 1;
   animation-fill-mode: forwards;
-  animation-delay: 3s;
+  animation-delay: 2.5s, 7s, 11s;
 }
 
 @keyframes filling-top {
@@ -140,7 +128,7 @@
     bottom: 0;
   }
   to {
-    bottom: 160px;
+    bottom: 47%;
   }
 }
 
@@ -149,15 +137,15 @@
   display: block;
   position: absolute;
   border-radius: 100% 50%;
-  width: 252px;
-  height: 70px;
+  width: 103%;
+  height: 400%;
   background-color: #32BAFA;
   z-index: -10;
   animation-name: waves;
   animation-duration: 2s;
   animation-iteration-count: 2;
   animation-timing-function: linear;
-  animation-delay: 3s;
+  animation-delay: 2.5s;
 }
 
 @keyframes waves {
@@ -173,7 +161,6 @@
     right: 60px;
     top: -15px;
   }
-
   75% {
     right: 0px;
     top: -10px
@@ -193,37 +180,44 @@
   transform: translate(-50%, 0%);
   z-index: 20;
   border-radius: 15px;
-  animation-name: pouring;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
+  animation-name: pouring, teacolor, teamilk;
+  animation-duration: 4.5s, 3s, 3s;
+  animation-iteration-count: 1, 1, 1;
   animation-fill-mode: forwards;
-  animation-delay: 1s;
+  animation-delay: 1s, 7s, 11s;
 }
 
 @keyframes pouring {
-  from {
-    top: -850px;
-    height: 1100px;
+  0% {
+    bottom: 200%;
+    height: 300%;
   }
-  to {
-    top: 270px;
-    height: 158px;
+
+  40% {
+    bottom: 15%;
+  }
+
+  100% {
+    bottom: 15%;
+    height: 20px;
   }
 }
 
 
 .tea__bag--container {
   position: absolute;
-  top: -300px;
+  top: -180%;
   animation-name: teabag;
   animation-duration: 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-delay: 5s;
   z-index: 30;
+  height: 83px;
+  width: 68px;
   .tea__bag {
-    width: 70px;
-    height: 80px;
+    width: 100%;
+    height: 100%;
     background-color: white;
     border-radius: 0 0 5px 5px;
     position: relative;
@@ -232,7 +226,7 @@
       border-left: 15px solid transparent;
       border-right: 15px solid transparent;
       height: 0;
-      width: 40px;
+      width: 39px;
       position: absolute;
       top: -19px;
     }
@@ -241,19 +235,12 @@
 
 @keyframes teabag {
   from {
-    top: -300px;
+    top: -180%;
   }
   to {
-    top: 338px;
+    top: 70%;
     transform: rotate(9deg);
   }
-}
-
-.tea__color {
-  animation-name: teacolor;
-  animation-duration: 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
 }
 
 @keyframes teacolor {
@@ -261,6 +248,46 @@
     background-color: #32BAFA;
   }
   to {
-    background-color: #c58e4c;
+    background-color: #b37121;
+  }
+}
+
+.tea__milk {
+  background-color: white;
+  width: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 20;
+  border-radius: 15px;
+  animation-name: milk;
+  animation-duration: 4.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 9s;
+}
+
+@keyframes milk {
+  0% {
+    bottom: 200%;
+    height: 300%;
+  }
+
+  40% {
+    bottom: 25%;
+  }
+
+  100% {
+    bottom: 25%;
+    height: 20px;
+  }
+}
+
+@keyframes teamilk {
+  from {
+    background-color: #b37121;
+  }
+  to {
+    background-color: #ce9654;
   }
 }
