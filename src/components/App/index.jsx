@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Link, Route, Switch, Redirect } from 'react-router-dom';
+import Landing from '../Landing/index';
 import Home from '../Home/index';
 import Tweets from '../Tweets/index';
 import WhatsNext from '../WhatsNext/index';
@@ -73,7 +74,7 @@ class App extends Component {
           <nav>
             <ul className='app__nav'>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/home">Home</Link>
               </li>
               <li>
                 <Link to="/tweets">Tweets</Link>
@@ -92,8 +93,9 @@ class App extends Component {
         </header>
         <main>
           <Switch>
+            <Route path="/landing" component={Landing}/>
             <Route
-            exact path="/"
+            exact path="/home"
             render={() => (
               <Home chatbotOpen={chatbotOpen}
                 handleChatbot={this.handleChatbot}
@@ -119,6 +121,7 @@ class App extends Component {
               )}
             />
             <Route exact path="/cats" component={RandomCats} />
+            <Redirect from="/" to="/landing"/>
           </Switch>
         </main>
       </div>

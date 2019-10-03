@@ -67,7 +67,7 @@ class Home extends Component {
               </div>
               <p className="home__chatbot--closed-text">Hola!</p>
             </div>
-          )}
+          }
         </div>
           {tea ? <Tea handleTea={handleTea} /> : null}
         <div className='home__buttons--container'>

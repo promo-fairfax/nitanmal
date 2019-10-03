@@ -4,7 +4,7 @@
   width: 100vw;
   background-color: #8aa6bf;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -27,6 +27,7 @@
   letter-spacing: 1px;
   color: #f2d338;
   transition: ease 0.4s;
+  margin-left: 1%;
 
     &:hover {
       box-shadow: 1px 1px 10px 1px rgba(30, 30, 30, 0.2);
@@ -53,6 +54,7 @@
   align-items: center;
   transition: ease 0.4s;
   cursor: pointer;
+  margin-left: 7%;
 
     &:hover {
       box-shadow: 1px 1px 10px 1px rgba(30, 30, 30, 0.2);
@@ -96,13 +98,18 @@
   position: fixed;
   bottom: 0;
   right: 0;
-  border: solid 2px black;
+  border-radius: 10px;
+  border: solid 2px #d9b23d;
+  z-index: 1;
 }
 
 .closed-cid {
-  height: 150px;
+  height: 160px;
   width: 130px;
   transition: height 2s, width 2s;
+  z-index:1;
+  background-color:#010326;
+  color: #ebeff2; 
 }
 
 .open {

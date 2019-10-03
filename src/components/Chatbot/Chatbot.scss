@@ -3,6 +3,7 @@
   height: 90%;
   position: fixed;
   overflow: scroll;
+  background: #ebeff2;
  }
  .actions {
   position: fixed;
@@ -21,7 +22,7 @@
  }
  .messages {
    position: absolute;
-   bottom: 240px;
+   bottom: 295px;
    width: 100%;
  }
  .messages div {
@@ -35,14 +36,14 @@
  }
 
  .messages .bot {
-  background-color: rgb(30, 233, 233);
+  background-color: #8aa6bf;
   text-align: left;
-  color: darkslategrey;
+  color: #010326;
 }
 
 .messages .self {
-  background-color: rgb(182, 72, 182);
+  background-color: #d9b23d;
   text-align: right;
   margin-left: auto;
-  color: white;
+  color: #010326;
 }
