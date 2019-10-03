@@ -51,10 +51,10 @@ class Home extends Component {
     return (
       <div className="home">
         {this.ReactTypingEffectDemo()}
-        <div className={`home__chatbot ${chatbotOpen ? "open" : "closed"}`}>
-          {chatbotOpen ? (
+        <div className={`home__chatbot ${chatbotOpen ? 'open' : 'closed-cid'}`}>
+          {chatbotOpen ? 
             <Chatbot handleChatbot={handleChatbot} />
-          ) : (
+           : 
             <div className="home__chatbot--closed" onClick={handleChatbot}>
               <div className="home__chatbot--closed-cid">
                 <div className="cid__hood"></div>

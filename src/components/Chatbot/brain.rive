@@ -1,35 +1,73 @@
 ! version = 2.0
 
-+ hello
-- hello, what is your name?
+// Bot variables
+! var name = Francisco
+! var age  = 51
 
-+ hi
-- hi, what is your name?
++ soy [*] (mujer|chica|senora|senorita)
+- Mil perdones! ¿Cómo se halla hoy Vuesa Merced?
 
-+ what is up
-- not much, what is your name?
++ (hola|buenas|que pasa|holi)
+- ¿Cómo se halla hoy Vuesa Merced?
 
-+ how are you
-- I'm great, how are you?
-- I'm good, you?
-- Good :) you?
-- Great! You?
-- I'm fine, thanks for asking!
++ [*] (bien|estupendamente|de puta madre|genial) [*]
+- Albricias!
 
-+ my name is *
-- nice to meet you, <star>
-- nice meeting you, <star>
-- that's a cool name, <star>
++ [*] (reguleras|mal|jodido|jodida) [*]
+- Yo también... me están fastidiando los Infantes de Carrión.
 
++  y (tu|vos|vuesa merced)
+- Aquí con Babieca! Cuál es el nombre de Vuesa Merced?
 
-+ thank you
-- you are welcome
-- welcome
-- no problem
-- no worries
++ (bien|me hallo bien) y (tu|vos|vuesa merced)
+- Aquí con Babieca! Cuál es el nombre de Vuesa Merced?
 
++ (mi nombre es|me llamo) *
+- <star2> es un nombre honorable, me gusta.
+
++ [*] (como te llamas|cual es tu nombre) [*]
+- Francisco, por supuesto.
+
++ ensename tu espada
+- cochina
+- <a href="https://espadasdetoledo.com/images/stories/virtuemart/product/Tizona_del_Cid_en_laton_rustico_y_pu%C3%B1o_de_madera_3.jpg">Aquí está!</a>
+
++ un dia duro en las cruzadas
+- Aquí matando gente
+
++ gracias
+- Las que Vuesa Merced tiene.
+
++ google *
+- Ahí lo llevas! <a class="espada" href="http://google.com/search?q=<star>">Click Here</a>
+
+//CATCH ALL TRIGGER
 + *
-- Sorry did not get what you said
-- I am afraid that i can not understand you
-- I did not get it
-- Sorry can you please elaborate that for me
+- No te entiendo...
+- Perdona?
+- A ver, dímelo otra vez.
+
+
++ [*] (tizona|espada) [*]
+- Tizona! La asesina de cien mil bellacos!
+
++ [*] robot [*]
+- Qué es eso?
+- Es eso algún tipo de magia?
+
+
+// TOPICS 
++ (tonto|feo)
+- Bellaco! Exijo vuestras disculpas por esta ofensa!{topic=sorry}
+
+> topic sorry
+
+  + [*] (perdona|perdon|disculpa|mis disculpas) [*]
+  - Que no vuelva a suceder...{topic=random}
+
+  + *
+  - Pide perdón!
+  - Eso no es una disculpa.
+  - Quieres que saque la espada??
+
+< topic
