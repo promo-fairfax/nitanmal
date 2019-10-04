@@ -12,7 +12,9 @@ const WhatsNext = () => {
 
     useEffect(() =>{
         const localValue = JSON.parse(localStorage.getItem('favoritesSeries'));
-        setSeriesList(localValue);
+        if (localValue) {
+            setSeriesList(localValue);
+        }
     }, [])
     
     useEffect(() =>{
