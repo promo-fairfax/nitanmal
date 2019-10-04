@@ -1,7 +1,7 @@
  .chat {
   width: 330px;
-  height: 90%;
-  position: fixed;
+  height: 92%;
+  position: relative;
   overflow: scroll;
   background: #ebeff2;
  }
@@ -22,7 +22,7 @@
  }
  .messages {
    position: absolute;
-   bottom: 295px;
+   bottom: 0;
    width: 100%;
  }
  .messages div {
