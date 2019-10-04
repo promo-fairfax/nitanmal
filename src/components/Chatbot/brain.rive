@@ -7,22 +7,25 @@
 + soy [*] (mujer|chica|senora|senorita)
 - Mil perdones! ¿Cómo se halla hoy Vuesa Merced?
 
-+ (hola|buenas|que pasa|holi)
++ soy [*] (hombre|chico|senora|senorito)
+- ¿Sois vos, Cid Campeador, que en buenhora ciñó espada?
+
++ (hola|buenas|que pasa|holi|hey) [*]
 - ¿Cómo se halla hoy Vuesa Merced?
 
-+ [*] (bien|estupendamente|de puta madre|genial) [*]
++ [*] (bien|estupendamente|de puta madre) [*]
 - Albricias!
 
-+ [*] (reguleras|mal|jodido|jodida) [*]
++ [*] (reguleras|mal|jodido|jodida|fatal) [*]
 - Yo también... me están fastidiando los Infantes de Carrión.
 
-+  y (tu|vos|vuesa merced)
++  y (tu|vos|vuesa merced) [*]
 - Aquí con Babieca! Cuál es el nombre de Vuesa Merced?
 
-+ (bien|me hallo bien) y (tu|vos|vuesa merced)
++ (bien|me hallo bien) y (tu|vos|vuesa merced) [*]
 - Aquí con Babieca! Cuál es el nombre de Vuesa Merced?
 
-+ (mi nombre es|me llamo) *
++ (mi nombre es|me llamo|soy) *
 - <star2> es un nombre honorable, me gusta.
 
 + [*] (como te llamas|cual es tu nombre) [*]
@@ -33,19 +36,33 @@
 - <a href="https://espadasdetoledo.com/images/stories/virtuemart/product/Tizona_del_Cid_en_laton_rustico_y_pu%C3%B1o_de_madera_3.jpg">Aquí está!</a>
 
 + un dia duro en las cruzadas
-- Aquí matando gente
+- Aquí matando gente...
 
-+ gracias
++ (gracias|muchas gracias)
 - Las que Vuesa Merced tiene.
+
++ a cholon
+- A las cruzadas!
+
++ [*] ayuda [*]
+- Qué necesita vos?
+
++ (genial|estupendo|maravilloso|perfecto)
+- Qué buen vasallo sería si tuviese buen señor!
+
++ [*] (un placer|adios|bye|ciao)
+- A sus pies
 
 + google *
 - Ahí lo llevas! <a class="espada" href="http://google.com/search?q=<star>">Click Here</a>
 
 //CATCH ALL TRIGGER
 + *
-- No te entiendo...
+- No entiendo a vos...
 - Perdona?
 - A ver, dímelo otra vez.
+- Cómo osas!
+- Mejor repite conmigo: Con vos nos iremos, Cid, por yermos y por poblados.
 
 
 + [*] (tizona|espada) [*]
@@ -57,7 +74,7 @@
 
 
 // TOPICS 
-+ (tonto|feo)
++ (tonto|feo|burro|desagradecido)
 - Bellaco! Exijo vuestras disculpas por esta ofensa!{topic=sorry}
 
 > topic sorry
