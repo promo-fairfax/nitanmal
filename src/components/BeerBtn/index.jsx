@@ -9,9 +9,8 @@ class BeerBtn extends Component {
         return(
             <div className={`beer__container ${ modalClosed }`}>
                 <div className='beer__container_content'>
-                    <div className='beer__close' onClick={ onClickClose }>X</div>
+                    <i className="fas fa-times tea__close" onClick={onClickClose}></i>
                     <img className='beer__gif' src='https://media.giphy.com/media/3o7btZjaYxqkGyOYA8/giphy.gif' alt ='animated gif of a beer on an unicorn'></img> 
-                    <p className='beer__text'>¡Venga!</p>
                 </div>
             </div>
         );
